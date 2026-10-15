@@ -1916,3 +1916,260 @@ textarea.form-input::-webkit-resizer { display: none; }
   transform: scale(1.1);
   display: block;
 }
+
+/* Featured project cards */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  gap: 0;
+}
+
+.project-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card .service-content-box {
+  padding: 20px;
+  width: 100%;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Technical skills */
+
+.technical-skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.skill-group {
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.skill-group h4 {
+  margin-bottom: 12px;
+}
+
+.skill-group p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.7;
+}
+
+@media (max-width: 580px) {
+  .technical-skills {
+    grid-template-columns: 1fr;
+  }
+}
+#project-gallery[hidden],
+#project-viewer[hidden] {
+  display: none !important;
+}
+
+/* =========================================
+   PORTFOLIO README VIEWER
+========================================= */
+
+/* Keep README inside Portfolio panel */
+#project-viewer {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#project-viewer[hidden],
+#project-gallery[hidden] {
+  display: none !important;
+}
+
+/* Back button */
+#back-to-projects {
+  color: var(--orange-yellow-crayola);
+  font-size: 14px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+#back-to-projects:hover {
+  text-decoration: underline;
+}
+
+/* Main README container */
+.readme-content {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+
+  color: var(--light-gray);
+  font-family: var(--ff-poppins);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Headings */
+.readme-content h1,
+.readme-content h2,
+.readme-content h3,
+.readme-content h4,
+.readme-content h5,
+.readme-content h6 {
+  color: var(--white-2);
+  font-family: var(--ff-poppins);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 28px 0 14px;
+}
+
+.readme-content h1 { font-size: 26px; }
+.readme-content h2 { font-size: 21px; }
+.readme-content h3 { font-size: 18px; }
+.readme-content h4 { font-size: 16px; }
+
+/* Paragraphs */
+.readme-content p {
+  color: var(--light-gray);
+  margin-bottom: 16px;
+}
+
+/* Links */
+.readme-content a {
+  color: var(--orange-yellow-crayola);
+  text-decoration: none;
+}
+
+.readme-content a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+.readme-content ul,
+.readme-content ol {
+  padding-left: 25px;
+  margin-bottom: 18px;
+}
+
+.readme-content ul li {
+  list-style-type: disc;
+}
+
+.readme-content ol li {
+  list-style-type: decimal;
+}
+
+.readme-content li {
+  color: var(--light-gray);
+  margin-bottom: 6px;
+}
+
+/* Images */
+.readme-content img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Code blocks */
+.readme-content pre {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+
+  background: var(--eerie-black-1);
+  color: var(--white-2);
+
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.readme-content pre code {
+  color: inherit;
+  font-family: monospace;
+  white-space: pre;
+}
+
+/* Inline code */
+.readme-content :not(pre) > code {
+  background: var(--eerie-black-1);
+  color: var(--orange-yellow-crayola);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* Tables */
+.readme-content table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.readme-content th,
+.readme-content td {
+  color: var(--light-gray);
+  border: 1px solid var(--jet);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.readme-content th {
+  color: var(--white-2);
+  background: var(--eerie-black-1);
+}
+
+/* Quotes */
+.readme-content blockquote {
+  border-left: 3px solid var(--orange-yellow-crayola);
+  padding-left: 15px;
+  margin: 20px 0;
+  color: var(--light-gray);
+}
+
+/* Separators */
+.readme-content hr {
+  border: none;
+  border-top: 1px solid var(--jet);
+  margin: 30px 0;
+}
+
+/* Prevent wide embedded elements from escaping */
+.readme-content iframe,
+.readme-content video,
+.readme-content svg {
+  max-width: 100%;
+}
