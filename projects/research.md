@@ -20,7 +20,7 @@ This was my first experience working on an engineering research project outside 
 ### Data Processing and Analysis
 
 - Worked with the Pecan Street dataset, which included several years of minute-by-minute electricity usage data from hundreds of homes.
-- Used Python and pandas to sort, filter, and organize the data by household and electrical parameters.
+- Used Python to sort, filter, and organize the data by household and electrical parameters.
 - Prepared smaller datasets that could be used for testing and developing the energy management agent.
 
 ### Additional Research
